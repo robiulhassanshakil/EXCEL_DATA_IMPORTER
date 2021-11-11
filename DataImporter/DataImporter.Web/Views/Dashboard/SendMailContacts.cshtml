@@ -1,0 +1,76 @@
+﻿@model DataImporter.Web.Models.ExcelData.SendMailContactsModel;
+@{
+    ViewData["Title"] = "SendMailContacts";
+}
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Send Email</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index","Dashboard")"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("ViewContacts","Dashboard")">Contacts</a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("SendMailContacts","Dashboard")">Send Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- liveline-section start -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form asp-action="SendMailContactsFinal" method="post">
+                            <div class="row">
+                                <input hidden class="form-control" asp-for="GroupId" value=@Model.GroupId />
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-lg">
+                                        <input type="text" class="form-control" asp-for="Email" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-lg has-ripple"> Send Mail</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- liveline-section end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+<div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit email template</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+
+}
+

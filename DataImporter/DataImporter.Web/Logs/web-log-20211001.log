@@ -1,0 +1,210 @@
+2021-10-01 00:00:15.032 +06:00 [INF] Application Starting up
+2021-10-01 00:00:21.096 +06:00 [INF] User logged in.
+2021-10-01 00:01:58.117 +06:00 [INF] Application Starting up
+2021-10-01 00:29:42.401 +06:00 [INF] Application Starting up
+2021-10-01 00:29:48.745 +06:00 [INF] User logged in.
+2021-10-01 00:41:20.981 +06:00 [INF] Application Starting up
+2021-10-01 00:41:28.957 +06:00 [INF] User logged in.
+2021-10-01 00:42:23.710 +06:00 [INF] Application Starting up
+2021-10-01 00:42:30.683 +06:00 [INF] User logged in.
+2021-10-01 00:44:32.882 +06:00 [INF] Application Starting up
+2021-10-01 00:44:41.468 +06:00 [INF] User logged in.
+2021-10-01 00:50:09.618 +06:00 [INF] Application Starting up
+2021-10-01 00:50:16.217 +06:00 [INF] User logged in.
+2021-10-01 01:11:39.548 +06:00 [INF] Application Starting up
+2021-10-01 01:11:47.888 +06:00 [INF] User logged in.
+2021-10-01 01:12:28.732 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Type' instances are not supported and should be avoided since they can lead to security issues. Path: $.Columns.DataType.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Type' instances are not supported and should be avoided since they can lead to security issues.
+   at System.Text.Json.Serialization.Converters.TypeConverter.Write(Utf8JsonWriter writer, Type value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableConverter`1.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-01 01:12:29.085 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-10-01 01:12:38.973 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Serialization and deserialization of 'System.Type' instances are not supported and should be avoided since they can lead to security issues. Path: $.Columns.DataType.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Type' instances are not supported and should be avoided since they can lead to security issues.
+   at System.Text.Json.Serialization.Converters.TypeConverter.Write(Utf8JsonWriter writer, Type value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableConverter`1.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-01 01:12:39.032 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-10-01 01:17:48.282 +06:00 [INF] Application Starting up
+2021-10-01 01:17:56.270 +06:00 [INF] User logged in.
+2021-10-01 01:18:45.842 +06:00 [INF] Application Starting up
+2021-10-01 01:18:55.505 +06:00 [INF] User logged in.
+2021-10-01 01:21:47.173 +06:00 [INF] Application Starting up
+2021-10-01 01:21:54.021 +06:00 [INF] User logged in.
+2021-10-01 01:26:23.161 +06:00 [INF] Application Starting up
+2021-10-01 01:26:29.844 +06:00 [INF] User logged in.
+2021-10-01 01:49:38.891 +06:00 [INF] Application Starting up
+2021-10-01 01:49:52.470 +06:00 [WRN] Invalid password for user.
+2021-10-01 01:49:52.474 +06:00 [WRN] User failed to provide the correct password.
+2021-10-01 01:50:12.757 +06:00 [INF] User logged in.
+2021-10-01 01:50:40.414 +06:00 [INF] Application Starting up
+2021-10-01 01:51:17.372 +06:00 [INF] User logged in.
+2021-10-01 01:51:54.930 +06:00 [INF] Application Starting up
+2021-10-01 01:52:59.342 +06:00 [INF] Application Starting up
+2021-10-01 01:53:07.360 +06:00 [INF] User logged in.
+2021-10-01 02:17:19.551 +06:00 [INF] Application Starting up
+2021-10-01 02:17:25.874 +06:00 [INF] User logged in.
+2021-10-01 02:19:13.487 +06:00 [INF] Application Starting up
+2021-10-01 02:19:19.816 +06:00 [INF] User logged in.
+2021-10-01 02:19:45.015 +06:00 [INF] Application Starting up
+2021-10-01 02:19:51.825 +06:00 [INF] User logged in.
+2021-10-01 02:26:00.918 +06:00 [INF] Application Starting up
+2021-10-01 02:26:07.188 +06:00 [INF] User logged in.
+2021-10-01 02:26:39.431 +06:00 [INF] Application Starting up
+2021-10-01 02:26:45.413 +06:00 [INF] User logged in.
+2021-10-01 02:27:53.187 +06:00 [INF] Application Starting up
+2021-10-01 02:27:58.975 +06:00 [INF] User logged in.
+2021-10-01 02:29:20.197 +06:00 [INF] Application Starting up
+2021-10-01 02:29:29.708 +06:00 [INF] User logged in.
+2021-10-01 02:30:23.919 +06:00 [INF] Application Starting up
+2021-10-01 02:30:29.877 +06:00 [INF] User logged in.
+2021-10-01 02:32:40.179 +06:00 [INF] Application Starting up
+2021-10-01 02:32:46.319 +06:00 [INF] User logged in.
+2021-10-01 02:35:32.159 +06:00 [INF] Application Starting up
+2021-10-01 02:35:40.072 +06:00 [INF] User logged in.
+2021-10-01 02:36:37.403 +06:00 [INF] Application Starting up
+2021-10-01 02:36:44.037 +06:00 [INF] User logged in.
+2021-10-01 02:37:21.521 +06:00 [INF] Application Starting up
+2021-10-01 02:37:28.663 +06:00 [INF] User logged in.
+2021-10-01 02:38:24.803 +06:00 [INF] Application Starting up
+2021-10-01 02:38:30.278 +06:00 [INF] User logged in.
+2021-10-01 02:40:56.943 +06:00 [INF] Application Starting up
+2021-10-01 02:41:03.029 +06:00 [INF] User logged in.
+2021-10-01 02:44:47.432 +06:00 [INF] Application Starting up
+2021-10-01 02:44:53.225 +06:00 [INF] User logged in.
+2021-10-01 02:46:13.653 +06:00 [INF] Application Starting up
+2021-10-01 02:46:19.200 +06:00 [INF] User logged in.
+2021-10-01 02:46:47.748 +06:00 [INF] Application Starting up
+2021-10-01 02:46:55.613 +06:00 [INF] User logged in.
+2021-10-01 02:47:48.542 +06:00 [INF] Application Starting up
+2021-10-01 02:47:54.832 +06:00 [INF] User logged in.
+2021-10-01 02:48:47.255 +06:00 [INF] Application Starting up
+2021-10-01 02:48:52.854 +06:00 [INF] User logged in.
+2021-10-01 03:59:42.724 +06:00 [INF] Application Starting up
+2021-10-01 03:59:50.198 +06:00 [INF] User logged in.
+2021-10-01 04:01:00.056 +06:00 [INF] Application Starting up
+2021-10-01 04:01:11.525 +06:00 [INF] User logged in.
+2021-10-01 04:04:15.200 +06:00 [INF] Application Starting up
+2021-10-01 04:04:22.962 +06:00 [INF] User logged in.
+2021-10-01 04:56:33.016 +06:00 [INF] Application Starting up
+2021-10-01 04:56:39.354 +06:00 [INF] User logged in.
+2021-10-01 05:00:28.437 +06:00 [INF] Application Starting up
+2021-10-01 05:00:34.316 +06:00 [INF] User logged in.
+2021-10-01 05:37:45.618 +06:00 [INF] Application Starting up
+2021-10-01 05:37:53.525 +06:00 [INF] User logged in.
+2021-10-01 05:41:09.497 +06:00 [INF] Application Starting up
+2021-10-01 05:41:19.823 +06:00 [INF] User logged in.
+2021-10-01 05:41:53.052 +06:00 [INF] Application Starting up
+2021-10-01 05:41:59.007 +06:00 [INF] User logged in.
+2021-10-01 05:46:40.862 +06:00 [INF] Application Starting up
+2021-10-01 05:46:46.848 +06:00 [INF] User logged in.
+2021-10-01 05:47:47.177 +06:00 [INF] Application Starting up
+2021-10-01 05:47:53.216 +06:00 [INF] User logged in.
+2021-10-01 05:50:55.386 +06:00 [INF] Application Starting up
+2021-10-01 05:51:01.587 +06:00 [INF] User logged in.
+2021-10-01 05:54:26.934 +06:00 [INF] Application Starting up
+2021-10-01 05:54:33.326 +06:00 [INF] User logged in.
+2021-10-01 06:48:11.766 +06:00 [INF] Application Starting up
+2021-10-01 06:48:19.229 +06:00 [INF] User logged in.
+2021-10-01 06:50:09.274 +06:00 [INF] Application Starting up
+2021-10-01 06:50:15.299 +06:00 [INF] User logged in.
+2021-10-01 06:57:16.902 +06:00 [INF] Application Starting up
+2021-10-01 06:57:23.397 +06:00 [INF] User logged in.
+2021-10-01 06:59:21.335 +06:00 [INF] Application Starting up
+2021-10-01 06:59:27.968 +06:00 [INF] User logged in.
+2021-10-01 07:01:37.136 +06:00 [INF] Application Starting up
+2021-10-01 07:01:44.436 +06:00 [INF] User logged in.
+2021-10-01 07:07:52.328 +06:00 [INF] Application Starting up
+2021-10-01 07:07:58.773 +06:00 [INF] User logged in.
+2021-10-01 14:51:40.377 +06:00 [INF] Application Starting up
+2021-10-01 14:51:55.092 +06:00 [INF] User logged in.
+2021-10-01 22:30:38.566 +06:00 [INF] Application Starting up
+2021-10-01 22:30:47.113 +06:00 [INF] User logged in.

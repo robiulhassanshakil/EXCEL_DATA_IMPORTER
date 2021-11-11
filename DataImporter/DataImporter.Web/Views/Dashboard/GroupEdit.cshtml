@@ -1,0 +1,54 @@
+﻿@model GroupEditModel;
+@{
+    ViewData["Title"] = "GroupEdit";
+}
+
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Edit An Existing A Group</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index","Dashboard")"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("ManageGroup","Dashboard")">Groups</a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("CreateGroup","Dashboard")">Edit Group</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Edit AN Existing A Group</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-action="GroupEdit" asp-antiforgery="true">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-lg">
+                                        <input type="text" asp-for="Name" id="name" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-lg has-ripple">Edit</button>
+                                        <a class="btn btn-primary btn-lg has-ripple" asp-action="ManageGroup" asp-controller="Dashboard">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

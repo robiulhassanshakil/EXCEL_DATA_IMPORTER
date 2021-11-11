@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "DownloadContacts";
+}
+
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Download Contacts</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index","Dashboard")"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("ViewContacts","Dashboard")">Contacts</a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("DownloadContacts","Dashboard")">Download Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- customar project  start -->
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        
+                        <div class="table-responsive">
+                            <table id="DownloadHistory" class="table table-bordered table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Group Name</th>
+                                        <th>Email</th>
+                                        <th>Date</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- customar project  end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(function () {
+            $('#DownloadHistory').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": "DownloadHistoryData",
+                "columnDefs": [
+                    {
+                        "orderable": false,
+                        "targets": 3,
+                        "render": function (data, type, row) {
+                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='Download/${data}'" value='${data}'>
+                                                    <i class="feather icon-edit">
+                                                    </i>
+                                                    &nbsp;Download
+                                                </button>`;
+                        }
+                    }
+                ]
+            });
+           
+
+        });
+    </script>
+}

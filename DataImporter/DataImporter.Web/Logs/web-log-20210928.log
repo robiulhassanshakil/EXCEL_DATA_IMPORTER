@@ -1,0 +1,95 @@
+2021-09-28 01:44:26.205 +06:00 [INF] Application Starting up
+2021-09-28 01:44:55.247 +06:00 [INF] Application Starting up
+2021-09-28 01:45:09.751 +06:00 [INF] User logged in.
+2021-09-28 02:01:36.908 +06:00 [INF] Application Starting up
+2021-09-28 02:01:50.519 +06:00 [WRN] Invalid password for user.
+2021-09-28 02:01:50.522 +06:00 [WRN] User failed to provide the correct password.
+2021-09-28 02:01:57.134 +06:00 [INF] User logged in.
+2021-09-28 02:03:40.577 +06:00 [INF] Application Starting up
+2021-09-28 02:03:52.379 +06:00 [INF] User logged in.
+2021-09-28 02:06:12.232 +06:00 [INF] Application Starting up
+2021-09-28 02:06:24.179 +06:00 [INF] User logged in.
+2021-09-28 02:13:31.716 +06:00 [INF] Application Starting up
+2021-09-28 02:13:44.473 +06:00 [INF] User logged in.
+2021-09-28 02:14:59.342 +06:00 [INF] Application Starting up
+2021-09-28 02:15:11.113 +06:00 [INF] User logged in.
+2021-09-28 02:17:36.045 +06:00 [INF] Application Starting up
+2021-09-28 02:17:49.159 +06:00 [INF] User logged in.
+2021-09-28 02:19:08.275 +06:00 [INF] Application Starting up
+2021-09-28 02:19:20.054 +06:00 [INF] User logged in.
+2021-09-28 02:20:20.779 +06:00 [INF] Application Starting up
+2021-09-28 02:20:32.411 +06:00 [INF] User logged in.
+2021-09-28 03:39:30.970 +06:00 [INF] Application Starting up
+2021-09-28 03:39:42.321 +06:00 [INF] User logged in.
+2021-09-28 03:40:44.826 +06:00 [INF] Application Starting up
+2021-09-28 03:40:55.827 +06:00 [INF] User logged in.
+2021-09-28 03:44:31.616 +06:00 [INF] Application Starting up
+2021-09-28 03:44:45.065 +06:00 [INF] User logged in.
+2021-09-28 03:45:20.113 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Dashboard_ViewContacts.<ExecuteAsync>b__14_0() in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Views\Dashboard\ViewContacts.cshtml:line 40
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_Dashboard_ViewContacts.ExecuteAsync() in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Views\Dashboard\ViewContacts.cshtml:line 34
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-28 03:45:20.552 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-09-28 03:47:05.594 +06:00 [INF] Application Starting up
+2021-09-28 03:47:19.151 +06:00 [INF] User logged in.
+2021-09-28 03:49:59.017 +06:00 [INF] Application Starting up
+2021-09-28 03:50:11.033 +06:00 [INF] User logged in.
+2021-09-28 03:56:56.761 +06:00 [INF] Application Starting up
+2021-09-28 03:57:07.766 +06:00 [INF] User logged in.
+2021-09-28 04:23:19.591 +06:00 [INF] Application Starting up
+2021-09-28 04:23:30.164 +06:00 [INF] User logged in.
+2021-09-28 04:27:50.228 +06:00 [INF] Application Starting up
+2021-09-28 04:28:00.922 +06:00 [INF] User logged in.
+2021-09-28 04:54:55.489 +06:00 [INF] Application Starting up
+2021-09-28 04:55:06.732 +06:00 [INF] User logged in.
+2021-09-28 07:43:08.252 +06:00 [INF] Application Starting up
+2021-09-28 07:43:48.381 +06:00 [INF] User logged in.
+2021-09-28 18:41:06.465 +06:00 [INF] Application Starting up
+2021-09-28 18:41:16.313 +06:00 [INF] User logged in.
+2021-09-28 18:42:50.005 +06:00 [INF] Application Starting up
+2021-09-28 18:42:57.709 +06:00 [INF] User logged in.
+2021-09-28 18:44:20.604 +06:00 [INF] Application Starting up
+2021-09-28 18:44:30.596 +06:00 [INF] User logged in.
+2021-09-28 18:46:25.585 +06:00 [INF] Application Starting up
+2021-09-28 18:46:49.529 +06:00 [INF] Application Starting up
+2021-09-28 18:46:58.616 +06:00 [INF] User logged in.
+2021-09-28 18:49:06.043 +06:00 [INF] Application Starting up
+2021-09-28 18:49:12.779 +06:00 [INF] User logged in.
+2021-09-28 18:49:57.209 +06:00 [INF] Application Starting up
+2021-09-28 18:50:05.344 +06:00 [INF] User logged in.

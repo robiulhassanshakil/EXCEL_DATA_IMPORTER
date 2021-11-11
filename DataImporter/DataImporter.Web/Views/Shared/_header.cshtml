@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+    <div class="m-header">
+        <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+        <a href="@Url.Action("Index","Dashboard")" class="b-brand">
+            <!-- ========   change your logo hear   ============ -->
+            <img src="~/assets/images/logo.png" alt="" class="logo">
+        </a>
+        <a href="@Url.Action("Index","Dashboard")" class="mob-toggler">
+            <i class="feather icon-more-vertical"></i>
+        </a>
+    </div>
+
+    <ui class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <div class="dropdown drp-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="feather icon-user"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-notification">
+                        <ui class="pro-body">
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                <a id="manage" class="nav-link text-dark" asp-controller="Dashboard" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                                <form id="logoutForm" class="form-inline" asp-controller="Account" asp-action="Logout" asp-route-returnUrl="@Url.ActionLink("Login", "Account")">
+                                    <button id="logout" class="btn btn-primary btn-sm btn-round has-ripple" type="submit">Logout</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <a class="dropdown-item" id="register" asp-controller="Account" asp-action="Register">Register</a>
+                                <a class="dropdown-item" id="login" asp-controller="Account" asp-action="Login">Login</a>
+                            }
+                        </ui>
+                        </div>
+                    </div>
+            </li>
+        </ul>
+    </ui>
+
+
+
+</header>

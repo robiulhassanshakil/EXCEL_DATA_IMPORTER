@@ -1,0 +1,122 @@
+﻿
+@model AllGroupForContacts;
+
+<section class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Upload Contacts</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index","Dashboard")"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("ViewContactsStatus","Dashboard")">Contacts</a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("ViewContacts","Dashboard")">View Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>View Contacts</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post">
+                            <div class="row">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="">Groups</label>
+                                    </div>
+                                    <select required asp-for="GroupId" id="Gp" asp-items="@(new SelectList(Model.Groups , "Id","Name"))"></select>
+                                </div>
+                            </div>
+
+                            <input type="submit" value="Download" formaction="ExcelFileDownload" class="btn btn-primary" />
+                            <input type="submit" value="Send Email" formaction="SendMailContacts" class="btn btn-primary" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center m-l-0">
+                            <div class="col-sm-6">
+                            </div>
+                            <div class="col-sm-6 text-right">
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="ViewContactFromDatabase" class="table table-bordered table-striped mb-0">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+</section>
+@section Scripts
+{
+    <script>
+        $(document).ready(function() {
+            $('#Gp').select2({
+                width: "18%", // need to override the changed default
+            });
+            var getValue;
+            $(function() {
+                $("#Gp").on('change',
+                    function() {
+
+                        getValue = $(this).val();
+
+                        if (getValue > 0) {
+
+                            var Coloums = [];
+                            if ($.fn.dataTable.isDataTable('#ViewContactFromDatabase')) {
+                                $('#ViewContactFromDatabase').DataTable().clear();
+                                $('#ViewContactFromDatabase').DataTable().destroy();
+                                $('#ViewContactFromDatabase').empty();
+                            };
+                            $.ajax({
+                                "type": 'POST',
+                                "url": "@Url.Action("ColumnName")",
+                                "data": { id: getValue },
+                                "success": function(d) {
+                                    for (i = 0; i < d.length; i++) {
+                                        Coloums[i] = { "title": d[i] };
+                                    }
+                                    $('#ViewContactFromDatabase').DataTable({
+                                        "columns": Coloums,
+                                        "processing": true,
+                                        "ajax": {
+                                            "type": "POST",
+                                            "url": "@Url.Action("ViewContactsForExcelSend")",
+                                            "data": { id: getValue }
+                                        }
+
+                                    }).done(function(data) {
+                                        $('#ViewContactFromDatabase').DataTable().ajax.reload();
+
+                                    });
+                                }
+                            });
+
+                        }
+                    });
+            });
+        });
+    </script>
+
+}
+

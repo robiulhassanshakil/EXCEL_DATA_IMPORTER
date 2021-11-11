@@ -1,0 +1,274 @@
+2021-09-25 00:01:17.541 +06:00 [INF] Application Starting up
+2021-09-25 00:03:44.430 +06:00 [INF] User created a new account with password.
+2021-09-25 00:04:56.783 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: Malformed input: 353 is an invalid input length.
+   at Microsoft.AspNetCore.WebUtilities.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.AspNetCore.WebUtilities.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.AspNetCore.WebUtilities.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.AspNetCore.WebUtilities.WebEncoders.Base64UrlDecode(String input)
+   at DataImporter.Web.Controllers.AccountController.ConfirmEmail(String userId, String token) in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Controllers\AccountController.cs:line 138
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-25 00:04:57.187 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-09-25 00:05:10.801 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.FormatException: Malformed input: 353 is an invalid input length.
+   at Microsoft.AspNetCore.WebUtilities.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.AspNetCore.WebUtilities.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.AspNetCore.WebUtilities.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.AspNetCore.WebUtilities.WebEncoders.Base64UrlDecode(String input)
+   at DataImporter.Web.Controllers.AccountController.ConfirmEmail(String userId, String token) in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Controllers\AccountController.cs:line 138
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-25 00:05:10.860 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-09-25 00:15:54.583 +06:00 [INF] Application Starting up
+2021-09-25 00:16:55.367 +06:00 [INF] User logged in.
+2021-09-25 00:17:07.475 +06:00 [INF] User logged out.
+2021-09-25 00:18:27.203 +06:00 [INF] User created a new account with password.
+2021-09-25 00:19:13.018 +06:00 [WRN] User cannot sign in without a confirmed email.
+2021-09-25 00:20:44.274 +06:00 [INF] User logged in.
+2021-09-25 00:21:53.476 +06:00 [INF] User logged out.
+2021-09-25 00:22:26.305 +06:00 [INF] User created a new account with password.
+2021-09-25 00:23:42.819 +06:00 [INF] User created a new account with password.
+2021-09-25 00:25:14.451 +06:00 [INF] User logged in.
+2021-09-25 00:26:07.768 +06:00 [INF] User logged out.
+2021-09-25 00:26:18.125 +06:00 [INF] User logged in.
+2021-09-25 15:45:43.519 +06:00 [INF] Application Starting up
+2021-09-25 15:46:01.927 +06:00 [INF] User logged in.
+2021-09-25 17:01:11.356 +06:00 [INF] Application Starting up
+2021-09-25 17:01:34.393 +06:00 [INF] User logged in.
+2021-09-25 17:03:16.302 +06:00 [INF] Application Starting up
+2021-09-25 17:03:32.106 +06:00 [INF] User logged in.
+2021-09-25 17:08:59.493 +06:00 [INF] Application Starting up
+2021-09-25 17:09:10.358 +06:00 [INF] User logged in.
+2021-09-25 17:18:39.469 +06:00 [INF] Application Starting up
+2021-09-25 17:18:52.934 +06:00 [INF] User logged in.
+2021-09-25 17:46:09.956 +06:00 [INF] Application Starting up
+2021-09-25 17:46:24.474 +06:00 [INF] User logged in.
+2021-09-25 17:47:07.480 +06:00 [INF] Application Starting up
+2021-09-25 17:47:21.029 +06:00 [INF] User logged in.
+2021-09-25 18:37:13.397 +06:00 [INF] Application Starting up
+2021-09-25 18:37:30.760 +06:00 [INF] User logged in.
+2021-09-25 18:39:44.006 +06:00 [INF] Application Starting up
+2021-09-25 18:39:56.439 +06:00 [INF] User logged in.
+2021-09-25 18:40:48.095 +06:00 [INF] Application Starting up
+2021-09-25 18:40:58.744 +06:00 [INF] User logged in.
+2021-09-25 18:44:09.961 +06:00 [INF] Application Starting up
+2021-09-25 18:44:20.502 +06:00 [INF] User logged in.
+2021-09-25 18:46:49.202 +06:00 [INF] Application Starting up
+2021-09-25 18:47:03.059 +06:00 [INF] User logged in.
+2021-09-25 18:57:43.334 +06:00 [INF] Application Starting up
+2021-09-25 18:57:57.408 +06:00 [INF] User logged in.
+2021-09-25 19:05:06.221 +06:00 [INF] Application Starting up
+2021-09-25 19:05:19.876 +06:00 [INF] User logged in.
+2021-09-25 19:10:06.014 +06:00 [INF] Application Starting up
+2021-09-25 19:10:17.085 +06:00 [INF] User logged in.
+2021-09-25 19:13:17.166 +06:00 [INF] Application Starting up
+2021-09-25 19:13:34.397 +06:00 [WRN] Invalid password for user.
+2021-09-25 19:13:34.402 +06:00 [WRN] User failed to provide the correct password.
+2021-09-25 19:13:43.159 +06:00 [INF] User logged in.
+2021-09-25 19:15:02.755 +06:00 [INF] Application Starting up
+2021-09-25 19:15:18.989 +06:00 [INF] User logged in.
+2021-09-25 19:20:18.327 +06:00 [INF] Application Starting up
+2021-09-25 19:20:30.999 +06:00 [INF] User logged in.
+2021-09-25 19:22:37.572 +06:00 [INF] Application Starting up
+2021-09-25 19:22:51.644 +06:00 [INF] User logged in.
+2021-09-25 19:35:47.972 +06:00 [INF] Application Starting up
+2021-09-25 19:36:02.309 +06:00 [INF] User logged in.
+2021-09-25 19:37:57.903 +06:00 [INF] Application Starting up
+2021-09-25 19:38:10.297 +06:00 [INF] User logged in.
+2021-09-25 19:40:36.628 +06:00 [INF] Application Starting up
+2021-09-25 19:40:48.022 +06:00 [INF] User logged in.
+2021-09-25 19:43:19.581 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+ExcelDataReader.Exceptions.HeaderException: Invalid file signature.
+   at ExcelDataReader.ExcelReaderFactory.CreateReader(Stream fileStream, ExcelReaderConfiguration configuration)
+   at DataImporter.Web.Models.Files.FileUploadModel.FileUpload(IFormFile file, AllGroupForContacts allGroupForContacts) in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Models\Files\FileUploadModel.cs:line 66
+   at DataImporter.Web.Controllers.DashboardController.UploadContacts(IFormFile fileSelect, AllGroupForContacts allGroupForContacts) in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 122
+   at lambda_method875(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-25 19:43:33.215 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-09-25 19:49:51.034 +06:00 [INF] Application Starting up
+2021-09-25 19:50:05.861 +06:00 [INF] User logged in.
+2021-09-25 19:51:27.207 +06:00 [INF] Application Starting up
+2021-09-25 19:51:41.687 +06:00 [INF] User logged in.
+2021-09-25 19:57:39.116 +06:00 [INF] Application Starting up
+2021-09-25 19:57:53.790 +06:00 [INF] User logged in.
+2021-09-25 20:00:25.422 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Dashboard_PreviewResult.ExecuteAsync() in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Views\Dashboard\PreviewResult.cshtml:line 43
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-25 20:00:26.099 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-09-25 20:05:25.474 +06:00 [INF] Application Starting up
+2021-09-25 20:05:44.240 +06:00 [WRN] Invalid password for user.
+2021-09-25 20:05:44.244 +06:00 [WRN] User failed to provide the correct password.
+2021-09-25 20:05:50.523 +06:00 [INF] User logged in.
+2021-09-25 20:07:34.698 +06:00 [INF] Application Starting up
+2021-09-25 20:07:48.337 +06:00 [INF] User logged in.
+2021-09-25 20:08:51.629 +06:00 [INF] Application Starting up
+2021-09-25 20:09:31.647 +06:00 [INF] User logged in.
+2021-09-25 20:10:02.265 +06:00 [INF] Application Starting up
+2021-09-25 20:10:17.078 +06:00 [INF] User logged in.
+2021-09-25 20:15:48.422 +06:00 [INF] Application Starting up
+2021-09-25 20:16:05.689 +06:00 [INF] User logged in.
+2021-09-25 20:16:20.016 +06:00 [ERR] Create Group Failed
+DataImporter.Importing.Exceptions.DuplicateTitleException: Group title already exists
+   at DataImporter.Importing.Services.GroupService.CreateGroup(Group group) in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Importing\Services\GroupService.cs:line 34
+   at DataImporter.Web.Models.GroupModel.CreateGroupModel.CreateGroup(Guid applicationuser) in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Models\GroupModel\CreateGroupModel.cs:line 37
+   at DataImporter.Web.Controllers.DashboardController.CreateGroup(CreateGroupModel model) in F:\code\aspnetmvcEXAMAssignment\Devskill-aspnetb5\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 66
+2021-09-25 20:18:07.368 +06:00 [INF] Application Starting up
+2021-09-25 20:18:21.600 +06:00 [INF] User logged in.
+2021-09-25 20:19:15.308 +06:00 [INF] Application Starting up
+2021-09-25 20:19:30.664 +06:00 [INF] User logged in.
+2021-09-25 20:29:10.607 +06:00 [INF] Application Starting up
+2021-09-25 20:29:26.234 +06:00 [INF] User logged in.
+2021-09-25 22:07:56.880 +06:00 [INF] Application Starting up
+2021-09-25 22:08:09.900 +06:00 [INF] User logged in.
+2021-09-25 22:08:53.335 +06:00 [INF] Application Starting up
+2021-09-25 22:09:06.437 +06:00 [INF] User logged in.
+2021-09-25 22:14:09.075 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataImporter.Web.Controllers.DashboardController.PreviewResult(FileUploadModel fileUploadModel)
+   at lambda_method876(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-25 22:14:09.437 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-09-25 22:14:51.411 +06:00 [INF] Application Starting up
+2021-09-25 22:15:01.790 +06:00 [INF] User logged in.
+2021-09-25 22:23:05.851 +06:00 [INF] Application Starting up
+2021-09-25 22:23:16.731 +06:00 [INF] User logged in.
+2021-09-25 22:38:32.542 +06:00 [INF] Application Starting up
+2021-09-25 22:38:51.355 +06:00 [INF] User logged in.

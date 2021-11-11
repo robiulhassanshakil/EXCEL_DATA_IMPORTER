@@ -1,0 +1,46 @@
+﻿<nav class="pcoded-navbar menu-light ">
+    <div class="navbar-wrapper  ">
+        <div class="navbar-content scroll-div ">
+
+            <ul class="nav pcoded-inner-navbar ">
+                <li class="nav-item pcoded-menu-caption">
+                </li>
+                <li class="nav-item pcoded">
+                    <a href="@Url.Action("Index" ,"Dashboard")" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                </li>
+                <li class="nav-item pcoded-hasmenu">
+                    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Groups</span></a>
+                    <ul class="pcoded-submenu">
+                        <li>
+                            <a href="@Url.Action("CreateGroup","Dashboard")">Create Group</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("ManageGroup","Dashboard")">Manage Groups</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item pcoded-hasmenu">
+                    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layers"></i></span><span class="pcoded-mtext">Contacts</span></a>
+                    <ul class="pcoded-submenu">
+                        <li>
+                            <a href="@Url.Action("ViewContacts","Dashboard")">View Contacts</a>
+                        </li>
+                        <li class="pcoded-hasmenu">
+                            <a href="#">Upload Contacts</a>
+                        <ul class="pcoded-submenu">
+                            <li><a href=@Url.Action("UploadContacts", "Dashboard")>Upload Contact</a></li>
+                            <li><a href=@Url.Action("ViewContactsStatus", "Dashboard")>Upload Status</a></li>
+                        </ul>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("DownloadContacts","Dashboard")">Download Contacts</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+</nav>

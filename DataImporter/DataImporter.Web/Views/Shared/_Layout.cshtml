@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Data Importer</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <title> DataImporter.Web</title>
+    <!-- Favicon icon -->
+    <link rel="icon" href="~/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- vendor css -->
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"  />
+    <link rel="stylesheet" href="~/assets/css/plugins/dataTables.bootstrap4.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/plugins/dropzone.min.css">
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body class="">
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+
+    <partial name="_NavBarPartial" />
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <partial name="_header" />
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    @RenderBody();
+    <!-- [ Main Content ] End -->
+    <!-- Required Js -->
+
+    <script src="~/assets/js/vendor-all.min.js"></script>
+    <script src="~/assets/js/plugins/bootstrap.min.js"></script>
+    <script src="~/assets/js/ripple.js"></script>
+    <script src="~/assets/js/pcoded.min.js"></script>
+
+
+    <!-- Apex Chart -->
+    <script src="~/assets/js/plugins/apexcharts.min.js"></script>
+
+    <!-- custom-chart js -->
+    <script src="~/assets/js/pages/dashboard-project.js"></script>
+    <script src="~/assets/js/plugins/jquery.dataTables.min.js"></script>
+    <script src="~/assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/js/pages/data-advance-custom.js"></script>
+    <script src="~/assets/js/plugins/trumbowyg.min.js"></script>
+    <script src="~/assets/js/plugins/dropzone-amd-module.min.js"></script>
+    <script src="~/assets/js/menu-setting.min.js"></script>
+
+    <!-- Apex Chart -->
+    <script src="~/assets/js/plugins/apexcharts.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
+
+
+

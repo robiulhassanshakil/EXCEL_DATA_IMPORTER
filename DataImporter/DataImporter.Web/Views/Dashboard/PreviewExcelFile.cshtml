@@ -1,0 +1,103 @@
+﻿
+@using System.Data
+@model DataImporter.Web.Models.Files.FileUploadModel;
+@{
+    ViewData["Title"] = "PreviewExcelFile";
+}
+
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5>Preview Contacts</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index","Dashboard")"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("ViewContactsStatus","Dashboard")">Contracts History</a></li>
+                            <li class="breadcrumb-item"><a href="@Url.Action("PreviewExcelFile","Dashboard")">Preview ExcelFile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- customar project  start -->
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        @foreach (DataColumn coloum in Model.DataTable.Columns)
+                                        {
+                                            <th>@coloum.ColumnName.ToString()</th>
+                                        }
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+                                    @{
+                                        var x = 0;
+                                        foreach (DataRow row in Model.DataTable.Rows)
+                                        {
+                                            x++;
+                                            {
+                                                <tr>
+                                                    @foreach (DataColumn dataColumn in Model.DataTable.Columns)
+                                                    {
+                                                        
+                                                        <td>
+                                                            @row[dataColumn]
+                                                        </td>
+
+                                                    }
+                                                </tr>
+                                            }
+                                            if (x > 10)
+                                                break;
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="row align-items-center m-l-0">
+                            <div class="col-sm-6 text-left">
+                                <form asp-action="CreateExcelFileStatus" asp-controller="Dashboard" Method="post">
+                                    <input type="hidden" asp-for=GroupId value=@Model.GroupId />
+                                    <input type="hidden" asp-for=ExcelFileName value=@Model.ExcelFileName />
+                                    <input type="hidden" asp-for=ExcelFilePath value=@Model.ExcelFilePath />
+                                    <button type='submit' class="btn btn-primary"> Import </button>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <form asp-action="ClearExcelFile" asp-controller="Dashboard" Method="post">
+                                    <input type="hidden" asp-for=ExcelFilePath value=@Model.ExcelFilePath />
+                                    <button type='submit' class="btn btn-danger">  Cancel </button>
+                                </form>
+                            </div>
+                        </div>
+                     
+
+                        
+                            
+                    
+                    </div>
+                </div>
+            </div>
+            <!-- customar project  end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+
